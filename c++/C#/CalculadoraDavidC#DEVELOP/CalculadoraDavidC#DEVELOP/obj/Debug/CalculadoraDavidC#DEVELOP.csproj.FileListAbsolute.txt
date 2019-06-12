@@ -1,0 +1,8 @@
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\bin\Debug\CalculadoraDavidC#DEVELOP.exe.config
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\bin\Debug\CalculadoraDavidC#DEVELOP.exe
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\bin\Debug\CalculadoraDavidC#DEVELOP.pdb
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\obj\Debug\CalculadoraDavidC#DEVELOP.csprojResolveAssemblyReference.cache
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\obj\Debug\CalculadoraDavidC#DEVELOP.exe
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\obj\Debug\CalculadoraDavidC#DEVELOP.pdb
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\obj\Debug\CalculadoraDavidC_DEVELOP.MainForm.resources
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\c++\C#\CalculadoraDavidC#DEVELOP\CalculadoraDavidC#DEVELOP\obj\Debug\CalculadoraDavidC#DEVELOP.csproj.GenerateResource.Cache
