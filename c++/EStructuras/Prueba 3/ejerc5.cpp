@@ -24,7 +24,7 @@ Cliente call(Cliente clientex)
 	cin>>clientex.fare;
 	cin.sync();
 }
-double calc(double sald )
+double calc(int sald )
 {
 	while(sald>=0&&sald<10)
 	{
@@ -56,15 +56,19 @@ void impres(Cliente clientep)
 
 int main()
 {
-    Cliente cliente[4];
+    Cliente cliente1, cliente2, cliente3, cliente4;
     for (int i=0; i<4;i++)
-    {
-    	call(cliente[i]);
-    	calc(cliente[i].fare);
-    	impres(cliente[i]);
-	}
-	
-	
-	 
+     	call(cliente1);
+    	calc(cliente1.fare);
+    	impres(cliente1);
+	    call(cliente2);
+    	calc(cliente2.fare);
+    	impres(cliente2);
+    	call(cliente3);
+    	calc(cliente3.fare);
+    	impres(cliente3);
+    	call(cliente4);
+    	calc(cliente4.fare);
+    	impres(cliente4);
 	return 0;
 }
