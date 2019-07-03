@@ -26,6 +26,9 @@ namespace IntroductionFiles
 		private System.Windows.Forms.TextBox txtCrearArchivo;
 		private System.Windows.Forms.Button btnCrearDirectorio;
 		private System.Windows.Forms.TextBox txbCrearDirectorio;
+		private System.Windows.Forms.Button btnCopiarDirectorio;
+		private System.Windows.Forms.TextBox txbDirOrigen;
+		private System.Windows.Forms.TextBox txbDirDestino;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -60,6 +63,9 @@ namespace IntroductionFiles
 			this.txtCrearArchivo = new System.Windows.Forms.TextBox();
 			this.btnCrearDirectorio = new System.Windows.Forms.Button();
 			this.txbCrearDirectorio = new System.Windows.Forms.TextBox();
+			this.btnCopiarDirectorio = new System.Windows.Forms.Button();
+			this.txbDirOrigen = new System.Windows.Forms.TextBox();
+			this.txbDirDestino = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -69,7 +75,7 @@ namespace IntroductionFiles
 			this.dgvLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
 			this.tipo,
 			this.log});
-			this.dgvLogs.Location = new System.Drawing.Point(23, 67);
+			this.dgvLogs.Location = new System.Drawing.Point(23, 79);
 			this.dgvLogs.Name = "dgvLogs";
 			this.dgvLogs.Size = new System.Drawing.Size(943, 203);
 			this.dgvLogs.TabIndex = 0;
@@ -151,7 +157,7 @@ namespace IntroductionFiles
 			// 
 			// btnCrearDirectorio
 			// 
-			this.btnCrearDirectorio.Location = new System.Drawing.Point(636, 335);
+			this.btnCrearDirectorio.Location = new System.Drawing.Point(735, 332);
 			this.btnCrearDirectorio.Name = "btnCrearDirectorio";
 			this.btnCrearDirectorio.Size = new System.Drawing.Size(164, 23);
 			this.btnCrearDirectorio.TabIndex = 8;
@@ -161,10 +167,34 @@ namespace IntroductionFiles
 			// 
 			// txbCrearDirectorio
 			// 
-			this.txbCrearDirectorio.Location = new System.Drawing.Point(627, 309);
+			this.txbCrearDirectorio.Location = new System.Drawing.Point(724, 306);
 			this.txbCrearDirectorio.Name = "txbCrearDirectorio";
 			this.txbCrearDirectorio.Size = new System.Drawing.Size(198, 20);
 			this.txbCrearDirectorio.TabIndex = 9;
+			// 
+			// btnCopiarDirectorio
+			// 
+			this.btnCopiarDirectorio.Location = new System.Drawing.Point(440, 335);
+			this.btnCopiarDirectorio.Name = "btnCopiarDirectorio";
+			this.btnCopiarDirectorio.Size = new System.Drawing.Size(115, 23);
+			this.btnCopiarDirectorio.TabIndex = 10;
+			this.btnCopiarDirectorio.Text = "Copiar Directorio";
+			this.btnCopiarDirectorio.UseVisualStyleBackColor = true;
+			this.btnCopiarDirectorio.Click += new System.EventHandler(this.BtnCopiarDirectorioClick);
+			// 
+			// txbDirOrigen
+			// 
+			this.txbDirOrigen.Location = new System.Drawing.Point(339, 309);
+			this.txbDirOrigen.Name = "txbDirOrigen";
+			this.txbDirOrigen.Size = new System.Drawing.Size(139, 20);
+			this.txbDirOrigen.TabIndex = 11;
+			// 
+			// txbDirDestino
+			// 
+			this.txbDirDestino.Location = new System.Drawing.Point(521, 309);
+			this.txbDirDestino.Name = "txbDirDestino";
+			this.txbDirDestino.Size = new System.Drawing.Size(154, 20);
+			this.txbDirDestino.TabIndex = 12;
 			// 
 			// MainForm
 			// 
@@ -172,6 +202,9 @@ namespace IntroductionFiles
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Highlight;
 			this.ClientSize = new System.Drawing.Size(1010, 451);
+			this.Controls.Add(this.txbDirDestino);
+			this.Controls.Add(this.txbDirOrigen);
+			this.Controls.Add(this.btnCopiarDirectorio);
 			this.Controls.Add(this.txbCrearDirectorio);
 			this.Controls.Add(this.btnCrearDirectorio);
 			this.Controls.Add(this.txtCrearArchivo);

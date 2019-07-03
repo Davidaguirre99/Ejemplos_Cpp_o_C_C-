@@ -149,7 +149,8 @@ namespace IntroductionFiles
 		{
 			try
 			{
-				string path= txtCrearArchivo.Text;
+				string path= txtCrearArchivo.Text;				
+				
 				
 				StreamWriter escritura = File.CreateText(@path);
 				escritura.WriteLine("Hola Archivo");
@@ -158,6 +159,14 @@ namespace IntroductionFiles
 				
 				//Cerrar el archivo despues de usarlo
 				escritura.Close();
+				
+				using(StreamWriter escrituraDos = File.CreateText(@path))
+				{
+				escrituraDos.WriteLine("Hola Archivo");
+				escrituraDos.WriteLine("Segunda Linea");
+				escrituraDos.WriteLine("Tecera Linea");					
+				}
+					
 				EscribirLog("info","Escritura Archivo : se estudio el archivo",dgvLogs);
 			}
 			catch(Exception error)
@@ -178,9 +187,47 @@ namespace IntroductionFiles
 				EscribirLog("error", error.ToString(),dgvLogs);
 			}
 		}
+		void BtnCopiarDirectorioClick(object sender, EventArgs e)
+		{
+			try{
+				string origenDirectorio = txbDirOrigen.Text;
+				string destinoDirectorio = txbDirDestino.Text;
+				bool validaciondirectorio = Directory.Exists(@origenDirectorio);
+				if(validaciondirectorio == true)
+				{
+					string[] directoriosOrigen= Directory.GetDirectories(@origenDirectorio);
+					foreach(string directorio in directoriosOrigen)
+					{
+						EscribirLog("info", directorio, dgvLogs );
+						int inicioSubString= origenDirectorio.Length;
+						int finSubString = directorio.Length;
+						directorio nombreDirectorio = directorio.Substring(incioSubString,finSubString);
+						EscribirLog("info", nombreDirectorio,dgvLogs);
+					}
+							
+				}
+			
+				else
+				{
+					EscribirLog("error", "No valido Directorio",dgvLogs);
+				}
+				
+				}
+				}
+				catch(Exception error)
+				{
+					EscribirLog("error",error.ToString(),dgvLogs);
+				}
+				
+						
+		}
 	}
 }
 
+
+	
+	
+		
 
 
 

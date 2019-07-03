@@ -6,3 +6,11 @@ C:\Users\USRGAM\Documents\GitHub\FILES\IntroductionFiles\IntroductionFiles\bin\D
 C:\Users\USRGAM\Documents\GitHub\FILES\IntroductionFiles\IntroductionFiles\bin\Debug\IntroductionFiles.pdb
 C:\Users\USRGAM\Documents\GitHub\FILES\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.exe
 C:\Users\USRGAM\Documents\GitHub\FILES\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.pdb
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\bin\Debug\IntroductionFiles.exe.config
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\bin\Debug\IntroductionFiles.exe
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\bin\Debug\IntroductionFiles.pdb
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.csprojResolveAssemblyReference.cache
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.MainForm.resources
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.csproj.GenerateResource.Cache
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.exe
+C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.pdb
