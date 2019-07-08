@@ -196,12 +196,15 @@ namespace IntroductionFiles
 				if(validaciondirectorio == true)
 				{
 					string[] directoriosOrigen= Directory.GetDirectories(@origenDirectorio);
+					//aRCHIVOS
+					string[] archivosEncontrados = Directory.GetFiles(@origenDirectorio);
+					//FileCopy
 					foreach(string directorio in directoriosOrigen)
 					{
 						EscribirLog("info", directorio, dgvLogs );
 						int inicioSubString= origenDirectorio.Length;
 						int finSubString = directorio.Length;
-						directorio nombreDirectorio = directorio.Substring(incioSubString,finSubString);
+						string  nombreDirectorio = directorio.Substring(inicioSubString,finSubString);
 						EscribirLog("info", nombreDirectorio,dgvLogs);
 					}
 							
@@ -213,16 +216,15 @@ namespace IntroductionFiles
 				}
 				
 				}
-				}
 				catch(Exception error)
 				{
 					EscribirLog("error",error.ToString(),dgvLogs);
 				}
-				
+		}
 						
 		}
 	}
-}
+
 
 
 	
