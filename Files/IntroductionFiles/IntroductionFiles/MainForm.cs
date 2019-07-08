@@ -159,6 +159,7 @@ namespace IntroductionFiles
 				
 				//Cerrar el archivo despues de usarlo
 				escritura.Close();
+				//StreamWriter escritura = File.(@path);
 				
 				using(StreamWriter escrituraDos = File.CreateText(@path))
 				{
