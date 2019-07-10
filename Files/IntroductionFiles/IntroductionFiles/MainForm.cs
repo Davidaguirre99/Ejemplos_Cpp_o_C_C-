@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Text;
 enum ColumnaLog {Tipo, Log};
 namespace IntroductionFiles
 {
@@ -221,6 +222,61 @@ namespace IntroductionFiles
 				{
 					EscribirLog("error",error.ToString(),dgvLogs);
 				}
+		}
+		void BtnStreamWClick(object sender, EventArgs e)
+		{
+			String path = txbStreamW.Text;
+			Stream writingStream = new FileStream(@path,FileMode.Create);
+			try
+			{
+			  
+			 if(writingStream.CanWrite)
+			 {
+			 	byte[] miNombreEnBytes = new byte[] {
+			 	    68,65,86,73,68,32,65,71,85,73,82,82,69
+			 	};
+			 	writingStream.Write(miNombreEnBytes, 0, miNombreEnBytes.Length);
+			 	writingStream.WriteByte(33);
+			    EscribirLog("info","Escribimos Archivo", dgvLogs);
+			 }else
+			 {
+			 	EscribirLog("error","No puede escribir en el archivo", dgvLogs);
+			 
+			 }
+			 writingStream.Close();
+				
+			}
+			catch(Exception error)
+			{
+				EscribirLog("error",error.ToString(), dgvLogs);
+			}
+			finally{
+				writingStream.Close();
+			}
+		}
+		void BtnStreamRClick(object sender, EventArgs e)
+		{
+			string path = txbStreamW.Text;
+			try
+			{
+				using(Stream readingStream = new FileStream(@path,FileMode.Open))
+				{
+				 byte[] arregloTemporal = new byte[3];
+				 UTF8Encoding codification = new UTF8Encoding(true);//dEFINIR CODIFICACION DEL TEXTO EN NUESTRO BUFFER
+				 //readingStream.Seek -> Moverse de Posiciones
+				 int posicion;
+				 while( (posicion= readingStream.Read(arregloTemporal, 0 ,arregloTemporal.Length)) > 0)
+				 {
+				 	string caracter = codification.GetString(arregloTemporal,0,arregloTemporal.Length);
+	                EscribirLog("Info",  "Caracter: "+ caracter, dgvLogs);			 
+				 }
+			}
+			
+			}catch(Exception error)
+			{
+				EscribirLog("error",error.ToString(), dgvLogs);
+			}
+			
 		}
 						
 		}

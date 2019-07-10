@@ -14,3 +14,12 @@ C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\Int
 C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.csproj.GenerateResource.Cache
 C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.exe
 C:\Users\USRGAM\Documents\GitHub\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.pdb
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.pdb
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\bin\Debug\IntroductionFiles.exe.config
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\bin\Debug\IntroductionFiles.exe
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\bin\Debug\IntroductionFiles.pdb
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.csprojAssemblyReference.cache
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.MainForm.resources
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.csproj.GenerateResource.cache
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.csproj.CoreCompileInputs.cache
+D:\DAVID PRGRA\Ejemplos_Cpp_o_C_C-\Files\IntroductionFiles\IntroductionFiles\obj\Debug\IntroductionFiles.exe

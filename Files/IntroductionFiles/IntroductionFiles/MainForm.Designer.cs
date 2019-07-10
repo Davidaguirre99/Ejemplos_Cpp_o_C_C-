@@ -29,6 +29,9 @@ namespace IntroductionFiles
 		private System.Windows.Forms.Button btnCopiarDirectorio;
 		private System.Windows.Forms.TextBox txbDirOrigen;
 		private System.Windows.Forms.TextBox txbDirDestino;
+		private System.Windows.Forms.TextBox txbStreamW;
+		private System.Windows.Forms.Button btnStreamW;
+		private System.Windows.Forms.Button btnStreamR;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -66,6 +69,9 @@ namespace IntroductionFiles
 			this.btnCopiarDirectorio = new System.Windows.Forms.Button();
 			this.txbDirOrigen = new System.Windows.Forms.TextBox();
 			this.txbDirDestino = new System.Windows.Forms.TextBox();
+			this.txbStreamW = new System.Windows.Forms.TextBox();
+			this.btnStreamW = new System.Windows.Forms.Button();
+			this.btnStreamR = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -96,7 +102,7 @@ namespace IntroductionFiles
 			// 
 			// btnanadirlog
 			// 
-			this.btnanadirlog.Location = new System.Drawing.Point(55, 306);
+			this.btnanadirlog.Location = new System.Drawing.Point(12, 304);
 			this.btnanadirlog.Name = "btnanadirlog";
 			this.btnanadirlog.Size = new System.Drawing.Size(254, 23);
 			this.btnanadirlog.TabIndex = 1;
@@ -157,7 +163,7 @@ namespace IntroductionFiles
 			// 
 			// btnCrearDirectorio
 			// 
-			this.btnCrearDirectorio.Location = new System.Drawing.Point(735, 332);
+			this.btnCrearDirectorio.Location = new System.Drawing.Point(622, 333);
 			this.btnCrearDirectorio.Name = "btnCrearDirectorio";
 			this.btnCrearDirectorio.Size = new System.Drawing.Size(164, 23);
 			this.btnCrearDirectorio.TabIndex = 8;
@@ -167,14 +173,14 @@ namespace IntroductionFiles
 			// 
 			// txbCrearDirectorio
 			// 
-			this.txbCrearDirectorio.Location = new System.Drawing.Point(724, 306);
+			this.txbCrearDirectorio.Location = new System.Drawing.Point(609, 307);
 			this.txbCrearDirectorio.Name = "txbCrearDirectorio";
 			this.txbCrearDirectorio.Size = new System.Drawing.Size(198, 20);
 			this.txbCrearDirectorio.TabIndex = 9;
 			// 
 			// btnCopiarDirectorio
 			// 
-			this.btnCopiarDirectorio.Location = new System.Drawing.Point(440, 335);
+			this.btnCopiarDirectorio.Location = new System.Drawing.Point(347, 350);
 			this.btnCopiarDirectorio.Name = "btnCopiarDirectorio";
 			this.btnCopiarDirectorio.Size = new System.Drawing.Size(115, 23);
 			this.btnCopiarDirectorio.TabIndex = 10;
@@ -184,17 +190,44 @@ namespace IntroductionFiles
 			// 
 			// txbDirOrigen
 			// 
-			this.txbDirOrigen.Location = new System.Drawing.Point(339, 309);
+			this.txbDirOrigen.Location = new System.Drawing.Point(292, 306);
 			this.txbDirOrigen.Name = "txbDirOrigen";
 			this.txbDirOrigen.Size = new System.Drawing.Size(139, 20);
 			this.txbDirOrigen.TabIndex = 11;
 			// 
 			// txbDirDestino
 			// 
-			this.txbDirDestino.Location = new System.Drawing.Point(521, 309);
+			this.txbDirDestino.Location = new System.Drawing.Point(440, 307);
 			this.txbDirDestino.Name = "txbDirDestino";
 			this.txbDirDestino.Size = new System.Drawing.Size(154, 20);
 			this.txbDirDestino.TabIndex = 12;
+			// 
+			// txbStreamW
+			// 
+			this.txbStreamW.Location = new System.Drawing.Point(854, 307);
+			this.txbStreamW.Name = "txbStreamW";
+			this.txbStreamW.Size = new System.Drawing.Size(100, 20);
+			this.txbStreamW.TabIndex = 13;
+			// 
+			// btnStreamW
+			// 
+			this.btnStreamW.Location = new System.Drawing.Point(854, 333);
+			this.btnStreamW.Name = "btnStreamW";
+			this.btnStreamW.Size = new System.Drawing.Size(111, 23);
+			this.btnStreamW.TabIndex = 14;
+			this.btnStreamW.Text = "Escribir Texto";
+			this.btnStreamW.UseVisualStyleBackColor = true;
+			this.btnStreamW.Click += new System.EventHandler(this.BtnStreamWClick);
+			// 
+			// btnStreamR
+			// 
+			this.btnStreamR.Location = new System.Drawing.Point(854, 362);
+			this.btnStreamR.Name = "btnStreamR";
+			this.btnStreamR.Size = new System.Drawing.Size(111, 23);
+			this.btnStreamR.TabIndex = 15;
+			this.btnStreamR.Text = "Stream R";
+			this.btnStreamR.UseVisualStyleBackColor = true;
+			this.btnStreamR.Click += new System.EventHandler(this.BtnStreamRClick);
 			// 
 			// MainForm
 			// 
@@ -202,6 +235,9 @@ namespace IntroductionFiles
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Highlight;
 			this.ClientSize = new System.Drawing.Size(1010, 451);
+			this.Controls.Add(this.btnStreamR);
+			this.Controls.Add(this.btnStreamW);
+			this.Controls.Add(this.txbStreamW);
 			this.Controls.Add(this.txbDirDestino);
 			this.Controls.Add(this.txbDirOrigen);
 			this.Controls.Add(this.btnCopiarDirectorio);
