@@ -189,7 +189,19 @@ namespace IntroductionFiles
 				EscribirLog("error", error.ToString(),dgvLogs);
 			}
 		}
-		void BtnCopiarDirectorioClick(object sender, EventArgs e)
+
+        private string RecorrerDirs(string x)
+        {
+            try
+            {
+                string[] nuevo = Directory.GetDirectories(@x);
+                return RecorrerDirs(nuevo);
+            }
+                
+            
+        }
+
+        void BtnCopiarDirectorioClick(object sender, EventArgs e)
 		{
 			try{
 				string origenDirectorio = txbDirOrigen.Text;
@@ -197,18 +209,22 @@ namespace IntroductionFiles
 				bool validaciondirectorio = Directory.Exists(@origenDirectorio);
 				if(validaciondirectorio == true)
 				{
-					string[] directoriosOrigen= Directory.GetDirectories(@origenDirectorio);
-					//aRCHIVOS
-					string[] archivosEncontrados = Directory.GetFiles(@origenDirectorio);
-					//FileCopy
-					foreach(string directorio in directoriosOrigen)
+                    string[] directoriosOrigen = Directory.GetDirectories(@origenDirectorio);
+                    foreach(string dir in directoriosOrigen)
+                    {
+                        EscribirLog("info",dir,dgvLogs);
+                    }
+                    //aRCHIVOS
+                    string[] archivosEncontrados = Directory.GetFiles(@origenDirectorio);
+                    //FileCopy
+                    /*foreach (string directorio in directoriosOrigen)
 					{
-						EscribirLog("info", directorio, dgvLogs );
+						EscribirLog("info",directorio, dgvLogs );
 						int inicioSubString= origenDirectorio.Length;
 						int finSubString = directorio.Length;
-						string  nombreDirectorio = directorio.Substring(inicioSubString,finSubString);
+						string  nombreDirectorio = directorio.ToString();
 						EscribirLog("info", nombreDirectorio,dgvLogs);
-					}
+					}*/
 							
 				}
 			
