@@ -54,213 +54,236 @@ namespace IntroductionFiles
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.dgvLogs = new System.Windows.Forms.DataGridView();
-			this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.log = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.btnanadirlog = new System.Windows.Forms.Button();
-			this.btnLeerDirectorio = new System.Windows.Forms.Button();
-			this.txtLeerDirectorio = new System.Windows.Forms.TextBox();
-			this.txbLeerDirectorio = new System.Windows.Forms.TextBox();
-			this.btnListarDirectorio = new System.Windows.Forms.Button();
-			this.btnCrearArchivo = new System.Windows.Forms.Button();
-			this.txtCrearArchivo = new System.Windows.Forms.TextBox();
-			this.btnCrearDirectorio = new System.Windows.Forms.Button();
-			this.txbCrearDirectorio = new System.Windows.Forms.TextBox();
-			this.btnCopiarDirectorio = new System.Windows.Forms.Button();
-			this.txbDirOrigen = new System.Windows.Forms.TextBox();
-			this.txbDirDestino = new System.Windows.Forms.TextBox();
-			this.txbStreamW = new System.Windows.Forms.TextBox();
-			this.btnStreamW = new System.Windows.Forms.Button();
-			this.btnStreamR = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// dgvLogs
-			// 
-			this.dgvLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-			this.tipo,
-			this.log});
-			this.dgvLogs.Location = new System.Drawing.Point(23, 79);
-			this.dgvLogs.Name = "dgvLogs";
-			this.dgvLogs.Size = new System.Drawing.Size(943, 203);
-			this.dgvLogs.TabIndex = 0;
-			this.dgvLogs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLogsCellContentClick);
-			this.dgvLogs.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1CellContentClick);
-			// 
-			// tipo
-			// 
-			this.tipo.HeaderText = "Tipo Logo";
-			this.tipo.Name = "tipo";
-			this.tipo.ReadOnly = true;
-			// 
-			// log
-			// 
-			this.log.HeaderText = "Descripcion";
-			this.log.Name = "log";
-			this.log.ReadOnly = true;
-			// 
-			// btnanadirlog
-			// 
-			this.btnanadirlog.Location = new System.Drawing.Point(12, 304);
-			this.btnanadirlog.Name = "btnanadirlog";
-			this.btnanadirlog.Size = new System.Drawing.Size(254, 23);
-			this.btnanadirlog.TabIndex = 1;
-			this.btnanadirlog.Text = "Anadir Log";
-			this.btnanadirlog.UseVisualStyleBackColor = true;
-			this.btnanadirlog.Click += new System.EventHandler(this.BtnanadirlogClick);
-			// 
-			// btnLeerDirectorio
-			// 
-			this.btnLeerDirectorio.Location = new System.Drawing.Point(87, 38);
-			this.btnLeerDirectorio.Name = "btnLeerDirectorio";
-			this.btnLeerDirectorio.Size = new System.Drawing.Size(133, 23);
-			this.btnLeerDirectorio.TabIndex = 2;
-			this.btnLeerDirectorio.Text = "Leer Directorio";
-			this.btnLeerDirectorio.UseVisualStyleBackColor = true;
-			this.btnLeerDirectorio.Click += new System.EventHandler(this.BtnLeerDirectorioClick);
-			// 
-			// txtLeerDirectorio
-			// 
-			this.txtLeerDirectorio.Location = new System.Drawing.Point(38, 12);
-			this.txtLeerDirectorio.Name = "txtLeerDirectorio";
-			this.txtLeerDirectorio.Size = new System.Drawing.Size(288, 20);
-			this.txtLeerDirectorio.TabIndex = 3;
-			// 
-			// txbLeerDirectorio
-			// 
-			this.txbLeerDirectorio.Location = new System.Drawing.Point(364, 12);
-			this.txbLeerDirectorio.Name = "txbLeerDirectorio";
-			this.txbLeerDirectorio.Size = new System.Drawing.Size(311, 20);
-			this.txbLeerDirectorio.TabIndex = 4;
-			// 
-			// btnListarDirectorio
-			// 
-			this.btnListarDirectorio.Location = new System.Drawing.Point(440, 38);
-			this.btnListarDirectorio.Name = "btnListarDirectorio";
-			this.btnListarDirectorio.Size = new System.Drawing.Size(75, 23);
-			this.btnListarDirectorio.TabIndex = 5;
-			this.btnListarDirectorio.Text = "Listar Directorio";
-			this.btnListarDirectorio.UseVisualStyleBackColor = true;
-			this.btnListarDirectorio.Click += new System.EventHandler(this.BtnListarDirectorioClick);
-			// 
-			// btnCrearArchivo
-			// 
-			this.btnCrearArchivo.Location = new System.Drawing.Point(770, 37);
-			this.btnCrearArchivo.Name = "btnCrearArchivo";
-			this.btnCrearArchivo.Size = new System.Drawing.Size(129, 23);
-			this.btnCrearArchivo.TabIndex = 6;
-			this.btnCrearArchivo.Text = "Crear Archivo";
-			this.btnCrearArchivo.UseVisualStyleBackColor = true;
-			this.btnCrearArchivo.Click += new System.EventHandler(this.BtnCrearArchivoClick);
-			// 
-			// txtCrearArchivo
-			// 
-			this.txtCrearArchivo.Location = new System.Drawing.Point(743, 11);
-			this.txtCrearArchivo.Name = "txtCrearArchivo";
-			this.txtCrearArchivo.Size = new System.Drawing.Size(211, 20);
-			this.txtCrearArchivo.TabIndex = 7;
-			// 
-			// btnCrearDirectorio
-			// 
-			this.btnCrearDirectorio.Location = new System.Drawing.Point(622, 333);
-			this.btnCrearDirectorio.Name = "btnCrearDirectorio";
-			this.btnCrearDirectorio.Size = new System.Drawing.Size(164, 23);
-			this.btnCrearDirectorio.TabIndex = 8;
-			this.btnCrearDirectorio.Text = "Crear Directorio";
-			this.btnCrearDirectorio.UseVisualStyleBackColor = true;
-			this.btnCrearDirectorio.Click += new System.EventHandler(this.BtnCrearDirectorioClick);
-			// 
-			// txbCrearDirectorio
-			// 
-			this.txbCrearDirectorio.Location = new System.Drawing.Point(609, 307);
-			this.txbCrearDirectorio.Name = "txbCrearDirectorio";
-			this.txbCrearDirectorio.Size = new System.Drawing.Size(198, 20);
-			this.txbCrearDirectorio.TabIndex = 9;
-			// 
-			// btnCopiarDirectorio
-			// 
-			this.btnCopiarDirectorio.Location = new System.Drawing.Point(347, 350);
-			this.btnCopiarDirectorio.Name = "btnCopiarDirectorio";
-			this.btnCopiarDirectorio.Size = new System.Drawing.Size(115, 23);
-			this.btnCopiarDirectorio.TabIndex = 10;
-			this.btnCopiarDirectorio.Text = "Copiar Directorio";
-			this.btnCopiarDirectorio.UseVisualStyleBackColor = true;
-			this.btnCopiarDirectorio.Click += new System.EventHandler(this.BtnCopiarDirectorioClick);
-			// 
-			// txbDirOrigen
-			// 
-			this.txbDirOrigen.Location = new System.Drawing.Point(292, 306);
-			this.txbDirOrigen.Name = "txbDirOrigen";
-			this.txbDirOrigen.Size = new System.Drawing.Size(139, 20);
-			this.txbDirOrigen.TabIndex = 11;
-			// 
-			// txbDirDestino
-			// 
-			this.txbDirDestino.Location = new System.Drawing.Point(440, 307);
-			this.txbDirDestino.Name = "txbDirDestino";
-			this.txbDirDestino.Size = new System.Drawing.Size(154, 20);
-			this.txbDirDestino.TabIndex = 12;
-			// 
-			// txbStreamW
-			// 
-			this.txbStreamW.Location = new System.Drawing.Point(854, 307);
-			this.txbStreamW.Name = "txbStreamW";
-			this.txbStreamW.Size = new System.Drawing.Size(100, 20);
-			this.txbStreamW.TabIndex = 13;
-			// 
-			// btnStreamW
-			// 
-			this.btnStreamW.Location = new System.Drawing.Point(854, 333);
-			this.btnStreamW.Name = "btnStreamW";
-			this.btnStreamW.Size = new System.Drawing.Size(111, 23);
-			this.btnStreamW.TabIndex = 14;
-			this.btnStreamW.Text = "Escribir Texto";
-			this.btnStreamW.UseVisualStyleBackColor = true;
-			this.btnStreamW.Click += new System.EventHandler(this.BtnStreamWClick);
-			// 
-			// btnStreamR
-			// 
-			this.btnStreamR.Location = new System.Drawing.Point(854, 362);
-			this.btnStreamR.Name = "btnStreamR";
-			this.btnStreamR.Size = new System.Drawing.Size(111, 23);
-			this.btnStreamR.TabIndex = 15;
-			this.btnStreamR.Text = "Stream R";
-			this.btnStreamR.UseVisualStyleBackColor = true;
-			this.btnStreamR.Click += new System.EventHandler(this.BtnStreamRClick);
-			// 
-			// MainForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.Highlight;
-			this.ClientSize = new System.Drawing.Size(1010, 451);
-			this.Controls.Add(this.btnStreamR);
-			this.Controls.Add(this.btnStreamW);
-			this.Controls.Add(this.txbStreamW);
-			this.Controls.Add(this.txbDirDestino);
-			this.Controls.Add(this.txbDirOrigen);
-			this.Controls.Add(this.btnCopiarDirectorio);
-			this.Controls.Add(this.txbCrearDirectorio);
-			this.Controls.Add(this.btnCrearDirectorio);
-			this.Controls.Add(this.txtCrearArchivo);
-			this.Controls.Add(this.btnCrearArchivo);
-			this.Controls.Add(this.btnListarDirectorio);
-			this.Controls.Add(this.txbLeerDirectorio);
-			this.Controls.Add(this.txtLeerDirectorio);
-			this.Controls.Add(this.btnLeerDirectorio);
-			this.Controls.Add(this.btnanadirlog);
-			this.Controls.Add(this.dgvLogs);
-			this.Name = "MainForm";
-			this.Text = "IntroductionFiles";
-			this.Load += new System.EventHandler(this.MainFormLoad);
-			this.Click += new System.EventHandler(this.BtnanadirlogClick);
-			((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.dgvLogs = new System.Windows.Forms.DataGridView();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.log = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnanadirlog = new System.Windows.Forms.Button();
+            this.btnLeerDirectorio = new System.Windows.Forms.Button();
+            this.txtLeerDirectorio = new System.Windows.Forms.TextBox();
+            this.txbLeerDirectorio = new System.Windows.Forms.TextBox();
+            this.btnListarDirectorio = new System.Windows.Forms.Button();
+            this.btnCrearArchivo = new System.Windows.Forms.Button();
+            this.txtCrearArchivo = new System.Windows.Forms.TextBox();
+            this.btnCrearDirectorio = new System.Windows.Forms.Button();
+            this.txbCrearDirectorio = new System.Windows.Forms.TextBox();
+            this.btnCopiarDirectorio = new System.Windows.Forms.Button();
+            this.txbDirOrigen = new System.Windows.Forms.TextBox();
+            this.txbDirDestino = new System.Windows.Forms.TextBox();
+            this.txbStreamW = new System.Windows.Forms.TextBox();
+            this.btnStreamW = new System.Windows.Forms.Button();
+            this.btnStreamR = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.txbDirArchivo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvLogs
+            // 
+            this.dgvLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tipo,
+            this.log});
+            this.dgvLogs.Location = new System.Drawing.Point(23, 79);
+            this.dgvLogs.Name = "dgvLogs";
+            this.dgvLogs.Size = new System.Drawing.Size(943, 203);
+            this.dgvLogs.TabIndex = 0;
+            this.dgvLogs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLogsCellContentClick);
+            this.dgvLogs.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1CellContentClick);
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo Logo";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // log
+            // 
+            this.log.HeaderText = "Descripcion";
+            this.log.Name = "log";
+            this.log.ReadOnly = true;
+            // 
+            // btnanadirlog
+            // 
+            this.btnanadirlog.Location = new System.Drawing.Point(12, 304);
+            this.btnanadirlog.Name = "btnanadirlog";
+            this.btnanadirlog.Size = new System.Drawing.Size(97, 23);
+            this.btnanadirlog.TabIndex = 1;
+            this.btnanadirlog.Text = "Anadir Log";
+            this.btnanadirlog.UseVisualStyleBackColor = true;
+            this.btnanadirlog.Click += new System.EventHandler(this.BtnanadirlogClick);
+            // 
+            // btnLeerDirectorio
+            // 
+            this.btnLeerDirectorio.Location = new System.Drawing.Point(87, 38);
+            this.btnLeerDirectorio.Name = "btnLeerDirectorio";
+            this.btnLeerDirectorio.Size = new System.Drawing.Size(133, 23);
+            this.btnLeerDirectorio.TabIndex = 2;
+            this.btnLeerDirectorio.Text = "Leer Directorio";
+            this.btnLeerDirectorio.UseVisualStyleBackColor = true;
+            this.btnLeerDirectorio.Click += new System.EventHandler(this.BtnLeerDirectorioClick);
+            // 
+            // txtLeerDirectorio
+            // 
+            this.txtLeerDirectorio.Location = new System.Drawing.Point(38, 12);
+            this.txtLeerDirectorio.Name = "txtLeerDirectorio";
+            this.txtLeerDirectorio.Size = new System.Drawing.Size(288, 20);
+            this.txtLeerDirectorio.TabIndex = 3;
+            // 
+            // txbLeerDirectorio
+            // 
+            this.txbLeerDirectorio.Location = new System.Drawing.Point(364, 12);
+            this.txbLeerDirectorio.Name = "txbLeerDirectorio";
+            this.txbLeerDirectorio.Size = new System.Drawing.Size(311, 20);
+            this.txbLeerDirectorio.TabIndex = 4;
+            // 
+            // btnListarDirectorio
+            // 
+            this.btnListarDirectorio.Location = new System.Drawing.Point(440, 38);
+            this.btnListarDirectorio.Name = "btnListarDirectorio";
+            this.btnListarDirectorio.Size = new System.Drawing.Size(75, 23);
+            this.btnListarDirectorio.TabIndex = 5;
+            this.btnListarDirectorio.Text = "Listar Directorio";
+            this.btnListarDirectorio.UseVisualStyleBackColor = true;
+            this.btnListarDirectorio.Click += new System.EventHandler(this.BtnListarDirectorioClick);
+            // 
+            // btnCrearArchivo
+            // 
+            this.btnCrearArchivo.Location = new System.Drawing.Point(770, 37);
+            this.btnCrearArchivo.Name = "btnCrearArchivo";
+            this.btnCrearArchivo.Size = new System.Drawing.Size(129, 23);
+            this.btnCrearArchivo.TabIndex = 6;
+            this.btnCrearArchivo.Text = "Crear Archivo";
+            this.btnCrearArchivo.UseVisualStyleBackColor = true;
+            this.btnCrearArchivo.Click += new System.EventHandler(this.BtnCrearArchivoClick);
+            // 
+            // txtCrearArchivo
+            // 
+            this.txtCrearArchivo.Location = new System.Drawing.Point(743, 11);
+            this.txtCrearArchivo.Name = "txtCrearArchivo";
+            this.txtCrearArchivo.Size = new System.Drawing.Size(211, 20);
+            this.txtCrearArchivo.TabIndex = 7;
+            // 
+            // btnCrearDirectorio
+            // 
+            this.btnCrearDirectorio.Location = new System.Drawing.Point(478, 333);
+            this.btnCrearDirectorio.Name = "btnCrearDirectorio";
+            this.btnCrearDirectorio.Size = new System.Drawing.Size(164, 23);
+            this.btnCrearDirectorio.TabIndex = 8;
+            this.btnCrearDirectorio.Text = "Crear Directorio";
+            this.btnCrearDirectorio.UseVisualStyleBackColor = true;
+            this.btnCrearDirectorio.Click += new System.EventHandler(this.BtnCrearDirectorioClick);
+            // 
+            // txbCrearDirectorio
+            // 
+            this.txbCrearDirectorio.Location = new System.Drawing.Point(459, 307);
+            this.txbCrearDirectorio.Name = "txbCrearDirectorio";
+            this.txbCrearDirectorio.Size = new System.Drawing.Size(198, 20);
+            this.txbCrearDirectorio.TabIndex = 9;
+            // 
+            // btnCopiarDirectorio
+            // 
+            this.btnCopiarDirectorio.Location = new System.Drawing.Point(211, 333);
+            this.btnCopiarDirectorio.Name = "btnCopiarDirectorio";
+            this.btnCopiarDirectorio.Size = new System.Drawing.Size(115, 23);
+            this.btnCopiarDirectorio.TabIndex = 10;
+            this.btnCopiarDirectorio.Text = "Copiar Directorio";
+            this.btnCopiarDirectorio.UseVisualStyleBackColor = true;
+            this.btnCopiarDirectorio.Click += new System.EventHandler(this.BtnCopiarDirectorioClick);
+            // 
+            // txbDirOrigen
+            // 
+            this.txbDirOrigen.Location = new System.Drawing.Point(124, 307);
+            this.txbDirOrigen.Name = "txbDirOrigen";
+            this.txbDirOrigen.Size = new System.Drawing.Size(139, 20);
+            this.txbDirOrigen.TabIndex = 11;
+            // 
+            // txbDirDestino
+            // 
+            this.txbDirDestino.Location = new System.Drawing.Point(283, 307);
+            this.txbDirDestino.Name = "txbDirDestino";
+            this.txbDirDestino.Size = new System.Drawing.Size(154, 20);
+            this.txbDirDestino.TabIndex = 12;
+            // 
+            // txbStreamW
+            // 
+            this.txbStreamW.Location = new System.Drawing.Point(687, 306);
+            this.txbStreamW.Name = "txbStreamW";
+            this.txbStreamW.Size = new System.Drawing.Size(100, 20);
+            this.txbStreamW.TabIndex = 13;
+            // 
+            // btnStreamW
+            // 
+            this.btnStreamW.Location = new System.Drawing.Point(687, 332);
+            this.btnStreamW.Name = "btnStreamW";
+            this.btnStreamW.Size = new System.Drawing.Size(111, 23);
+            this.btnStreamW.TabIndex = 14;
+            this.btnStreamW.Text = "Escribir Texto";
+            this.btnStreamW.UseVisualStyleBackColor = true;
+            this.btnStreamW.Click += new System.EventHandler(this.BtnStreamWClick);
+            // 
+            // btnStreamR
+            // 
+            this.btnStreamR.Location = new System.Drawing.Point(687, 361);
+            this.btnStreamR.Name = "btnStreamR";
+            this.btnStreamR.Size = new System.Drawing.Size(111, 23);
+            this.btnStreamR.TabIndex = 15;
+            this.btnStreamR.Text = "Stream R";
+            this.btnStreamR.UseVisualStyleBackColor = true;
+            this.btnStreamR.Click += new System.EventHandler(this.BtnStreamRClick);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(853, 332);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 16;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // txbDirArchivo
+            // 
+            this.txbDirArchivo.Location = new System.Drawing.Point(839, 304);
+            this.txbDirArchivo.Name = "txbDirArchivo";
+            this.txbDirArchivo.Size = new System.Drawing.Size(100, 20);
+            this.txbDirArchivo.TabIndex = 17;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(1010, 451);
+            this.Controls.Add(this.txbDirArchivo);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnStreamR);
+            this.Controls.Add(this.btnStreamW);
+            this.Controls.Add(this.txbStreamW);
+            this.Controls.Add(this.txbDirDestino);
+            this.Controls.Add(this.txbDirOrigen);
+            this.Controls.Add(this.btnCopiarDirectorio);
+            this.Controls.Add(this.txbCrearDirectorio);
+            this.Controls.Add(this.btnCrearDirectorio);
+            this.Controls.Add(this.txtCrearArchivo);
+            this.Controls.Add(this.btnCrearArchivo);
+            this.Controls.Add(this.btnListarDirectorio);
+            this.Controls.Add(this.txbLeerDirectorio);
+            this.Controls.Add(this.txtLeerDirectorio);
+            this.Controls.Add(this.btnLeerDirectorio);
+            this.Controls.Add(this.btnanadirlog);
+            this.Controls.Add(this.dgvLogs);
+            this.Name = "MainForm";
+            this.Text = "IntroductionFiles";
+            this.Load += new System.EventHandler(this.MainFormLoad);
+            this.Click += new System.EventHandler(this.BtnanadirlogClick);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
-		}
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.TextBox txbDirArchivo;
+    }
 	}
 

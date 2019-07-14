@@ -154,20 +154,20 @@ namespace IntroductionFiles
 				
 				
 				StreamWriter escritura = File.CreateText(@path);
-				escritura.WriteLine("Hola Archivo");
-				escritura.WriteLine("Segunda Linea");
-				escritura.WriteLine("Tecera Linea");
+				escritura.WriteLine("Nombre:");
+				escritura.WriteLine("Edad:");
+				escritura.WriteLine("Numero:");
 				
 				//Cerrar el archivo despues de usarlo
 				escritura.Close();
 				//StreamWriter escritura = File.(@path);
 				
-				using(StreamWriter escrituraDos = File.CreateText(@path))
+				/*using(StreamWriter escrituraDos = File.CreateText(@path))
 				{
 				escrituraDos.WriteLine("Hola Archivo");
 				escrituraDos.WriteLine("Segunda Linea");
 				escrituraDos.WriteLine("Tecera Linea");					
-				}
+				}*/
 					
 				EscribirLog("info","Escritura Archivo : se estudio el archivo",dgvLogs);
 			}
@@ -190,15 +190,47 @@ namespace IntroductionFiles
 			}
 		}
 
-        private string RecorrerDirs(string x)
+        private void copiarDirectorio(string origen, string destino, bool validacion)
         {
             try
             {
-                string[] nuevo = Directory.GetDirectories(@x);
-                return RecorrerDirs(nuevo);
+                DirectoryInfo dir = new DirectoryInfo(origen);
+                if (!dir.Exists)
+                {
+                    string messageboxtext = "Directorio no Existe";
+
+                    MessageBoxIcon icono = MessageBoxIcon.Error;
+                    MessageBoxButtons Btn = MessageBoxButtons.OK;
+                    MessageBox.Show(messageboxtext, "", Btn, icono);
+                }
+                DirectoryInfo[] dirs = dir.GetDirectories();
+                if (!Directory.Exists(destino))
+                {
+                    Directory.CreateDirectory(destino);
+                }
+                FileInfo[] archivos = dir.GetFiles();
+                foreach (FileInfo Archivo in archivos)
+                {
+                    string temppath = Path.Combine(destino, Archivo.Name);
+                    Archivo.CopyTo(temppath, false);
+                }
+                if (validacion)
+                {
+                    foreach (DirectoryInfo subdirectorio in dirs)
+                    {
+                        string temppath = Path.Combine(destino, subdirectorio.Name);
+                        copiarDirectorio(subdirectorio.FullName, temppath, validacion);
+                    }
+                }
             }
-                
-            
+            catch (Exception error)
+            {
+                //string messageboxtext = "Directorio no Existe";
+
+                MessageBoxIcon icono = MessageBoxIcon.Error;
+                MessageBoxButtons Btn = MessageBoxButtons.OK;
+                MessageBox.Show(error.ToString(), "", Btn, icono);
+            }
         }
 
         void BtnCopiarDirectorioClick(object sender, EventArgs e)
@@ -207,15 +239,14 @@ namespace IntroductionFiles
 				string origenDirectorio = txbDirOrigen.Text;
 				string destinoDirectorio = txbDirDestino.Text;
 				bool validaciondirectorio = Directory.Exists(@origenDirectorio);
-				if(validaciondirectorio == true)
-				{
-                    string[] directoriosOrigen = Directory.GetDirectories(@origenDirectorio);
-                    foreach(string dir in directoriosOrigen)
-                    {
-                        EscribirLog("info",dir,dgvLogs);
-                    }
+				
+                   // string[] directoriosOrigen = Directory.GetDirectories(@origenDirectorio);
+                    //foreach(string dir in directoriosOrigen)
+                    
+                        copiarDirectorio(origenDirectorio,destinoDirectorio,true);
+                    
                     //aRCHIVOS
-                    string[] archivosEncontrados = Directory.GetFiles(@origenDirectorio);
+                   // string[] archivosEncontrados = Directory.GetFiles(@origenDirectorio);
                     //FileCopy
                     /*foreach (string directorio in directoriosOrigen)
 					{
@@ -225,13 +256,7 @@ namespace IntroductionFiles
 						string  nombreDirectorio = directorio.ToString();
 						EscribirLog("info", nombreDirectorio,dgvLogs);
 					}*/
-							
-				}
-			
-				else
-				{
-					EscribirLog("error", "No valido Directorio",dgvLogs);
-				}
+				
 				
 				}
 				catch(Exception error)
@@ -250,7 +275,7 @@ namespace IntroductionFiles
 			 {
 			 	byte[] miNombreEnBytes = new byte[] {
 			 	    68,65,86,73,68,32,65,71,85,73,82,82,69
-			 	};
+			 };
 			 	writingStream.Write(miNombreEnBytes, 0, miNombreEnBytes.Length);
 			 	writingStream.WriteByte(33);
 			    EscribirLog("info","Escribimos Archivo", dgvLogs);
@@ -294,8 +319,17 @@ namespace IntroductionFiles
 			}
 			
 		}
-						
-		}
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string archivodir = txbDirArchivo.Text;
+            bool validacion = File.Exists(archivodir);
+            if(validacion==true)
+            {
+                
+            }
+        }
+    }
 	}
 
 
