@@ -54,6 +54,7 @@ namespace IntroductionFiles
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLogs = new System.Windows.Forms.DataGridView();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.log = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,6 +86,8 @@ namespace IntroductionFiles
             this.btnActualizar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txbType = new System.Windows.Forms.TextBox();
+            this.btnOrdenarArregloBS = new System.Windows.Forms.Button();
+            this.txbarrreglo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +97,14 @@ namespace IntroductionFiles
             this.dgvLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipo,
             this.log});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLogs.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLogs.Location = new System.Drawing.Point(23, 79);
             this.dgvLogs.Name = "dgvLogs";
             this.dgvLogs.Size = new System.Drawing.Size(943, 203);
@@ -125,7 +136,7 @@ namespace IntroductionFiles
             // 
             // btnLeerDirectorio
             // 
-            this.btnLeerDirectorio.Location = new System.Drawing.Point(87, 38);
+            this.btnLeerDirectorio.Location = new System.Drawing.Point(36, 38);
             this.btnLeerDirectorio.Name = "btnLeerDirectorio";
             this.btnLeerDirectorio.Size = new System.Drawing.Size(133, 23);
             this.btnLeerDirectorio.TabIndex = 2;
@@ -135,21 +146,21 @@ namespace IntroductionFiles
             // 
             // txtLeerDirectorio
             // 
-            this.txtLeerDirectorio.Location = new System.Drawing.Point(38, 12);
+            this.txtLeerDirectorio.Location = new System.Drawing.Point(12, 12);
             this.txtLeerDirectorio.Name = "txtLeerDirectorio";
-            this.txtLeerDirectorio.Size = new System.Drawing.Size(288, 20);
+            this.txtLeerDirectorio.Size = new System.Drawing.Size(237, 20);
             this.txtLeerDirectorio.TabIndex = 3;
             // 
             // txbLeerDirectorio
             // 
-            this.txbLeerDirectorio.Location = new System.Drawing.Point(364, 12);
+            this.txbLeerDirectorio.Location = new System.Drawing.Point(269, 12);
             this.txbLeerDirectorio.Name = "txbLeerDirectorio";
-            this.txbLeerDirectorio.Size = new System.Drawing.Size(311, 20);
+            this.txbLeerDirectorio.Size = new System.Drawing.Size(216, 20);
             this.txbLeerDirectorio.TabIndex = 4;
             // 
             // btnListarDirectorio
             // 
-            this.btnListarDirectorio.Location = new System.Drawing.Point(440, 38);
+            this.btnListarDirectorio.Location = new System.Drawing.Point(325, 38);
             this.btnListarDirectorio.Name = "btnListarDirectorio";
             this.btnListarDirectorio.Size = new System.Drawing.Size(75, 23);
             this.btnListarDirectorio.TabIndex = 5;
@@ -159,7 +170,7 @@ namespace IntroductionFiles
             // 
             // btnCrearArchivo
             // 
-            this.btnCrearArchivo.Location = new System.Drawing.Point(770, 37);
+            this.btnCrearArchivo.Location = new System.Drawing.Point(526, 38);
             this.btnCrearArchivo.Name = "btnCrearArchivo";
             this.btnCrearArchivo.Size = new System.Drawing.Size(129, 23);
             this.btnCrearArchivo.TabIndex = 6;
@@ -169,9 +180,9 @@ namespace IntroductionFiles
             // 
             // txtCrearArchivo
             // 
-            this.txtCrearArchivo.Location = new System.Drawing.Point(743, 11);
+            this.txtCrearArchivo.Location = new System.Drawing.Point(511, 12);
             this.txtCrearArchivo.Name = "txtCrearArchivo";
-            this.txtCrearArchivo.Size = new System.Drawing.Size(211, 20);
+            this.txtCrearArchivo.Size = new System.Drawing.Size(160, 20);
             this.txtCrearArchivo.TabIndex = 7;
             // 
             // btnCrearDirectorio
@@ -258,6 +269,7 @@ namespace IntroductionFiles
             this.txbDirArchivo.Name = "txbDirArchivo";
             this.txbDirArchivo.Size = new System.Drawing.Size(85, 20);
             this.txbDirArchivo.TabIndex = 17;
+            this.txbDirArchivo.TextChanged += new System.EventHandler(this.txbDirArchivo_TextChanged);
             // 
             // txbNombre
             // 
@@ -283,20 +295,20 @@ namespace IntroductionFiles
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(833, 315);
+            this.label1.Location = new System.Drawing.Point(842, 318);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Nombre:";
+            this.label1.Text = "Cita1:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(836, 342);
+            this.label2.Location = new System.Drawing.Point(842, 343);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Numero";
+            this.label2.Text = "Cita2:";
             // 
             // label3
             // 
@@ -305,7 +317,7 @@ namespace IntroductionFiles
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Años:";
+            this.label3.Text = "Cita3:";
             // 
             // btnAdd
             // 
@@ -352,12 +364,31 @@ namespace IntroductionFiles
             this.txbType.Size = new System.Drawing.Size(100, 20);
             this.txbType.TabIndex = 28;
             // 
+            // btnOrdenarArregloBS
+            // 
+            this.btnOrdenarArregloBS.Location = new System.Drawing.Point(700, 38);
+            this.btnOrdenarArregloBS.Name = "btnOrdenarArregloBS";
+            this.btnOrdenarArregloBS.Size = new System.Drawing.Size(75, 23);
+            this.btnOrdenarArregloBS.TabIndex = 29;
+            this.btnOrdenarArregloBS.Text = "Ordenar BS";
+            this.btnOrdenarArregloBS.UseVisualStyleBackColor = true;
+            this.btnOrdenarArregloBS.Click += new System.EventHandler(this.btnOrdenarArregloBS_Click);
+            // 
+            // txbarrreglo
+            // 
+            this.txbarrreglo.Location = new System.Drawing.Point(700, 12);
+            this.txbarrreglo.Name = "txbarrreglo";
+            this.txbarrreglo.Size = new System.Drawing.Size(126, 20);
+            this.txbarrreglo.TabIndex = 30;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1010, 451);
+            this.Controls.Add(this.txbarrreglo);
+            this.Controls.Add(this.btnOrdenarArregloBS);
             this.Controls.Add(this.txbType);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnActualizar);
@@ -410,6 +441,8 @@ namespace IntroductionFiles
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbType;
+        private System.Windows.Forms.Button btnOrdenarArregloBS;
+        private System.Windows.Forms.TextBox txbarrreglo;
     }
 	}
 
