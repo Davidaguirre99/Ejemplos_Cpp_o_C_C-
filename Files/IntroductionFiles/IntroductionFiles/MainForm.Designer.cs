@@ -74,6 +74,13 @@ namespace IntroductionFiles
             this.btnStreamR = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.txbDirArchivo = new System.Windows.Forms.TextBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
+            this.txbNumero = new System.Windows.Forms.TextBox();
+            this.txbAnios = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,7 +172,7 @@ namespace IntroductionFiles
             // 
             // btnCrearDirectorio
             // 
-            this.btnCrearDirectorio.Location = new System.Drawing.Point(478, 333);
+            this.btnCrearDirectorio.Location = new System.Drawing.Point(440, 333);
             this.btnCrearDirectorio.Name = "btnCrearDirectorio";
             this.btnCrearDirectorio.Size = new System.Drawing.Size(164, 23);
             this.btnCrearDirectorio.TabIndex = 8;
@@ -175,9 +182,9 @@ namespace IntroductionFiles
             // 
             // txbCrearDirectorio
             // 
-            this.txbCrearDirectorio.Location = new System.Drawing.Point(459, 307);
+            this.txbCrearDirectorio.Location = new System.Drawing.Point(440, 307);
             this.txbCrearDirectorio.Name = "txbCrearDirectorio";
-            this.txbCrearDirectorio.Size = new System.Drawing.Size(198, 20);
+            this.txbCrearDirectorio.Size = new System.Drawing.Size(160, 20);
             this.txbCrearDirectorio.TabIndex = 9;
             // 
             // btnCopiarDirectorio
@@ -199,21 +206,21 @@ namespace IntroductionFiles
             // 
             // txbDirDestino
             // 
-            this.txbDirDestino.Location = new System.Drawing.Point(283, 307);
+            this.txbDirDestino.Location = new System.Drawing.Point(269, 307);
             this.txbDirDestino.Name = "txbDirDestino";
             this.txbDirDestino.Size = new System.Drawing.Size(154, 20);
             this.txbDirDestino.TabIndex = 12;
             // 
             // txbStreamW
             // 
-            this.txbStreamW.Location = new System.Drawing.Point(687, 306);
+            this.txbStreamW.Location = new System.Drawing.Point(630, 307);
             this.txbStreamW.Name = "txbStreamW";
             this.txbStreamW.Size = new System.Drawing.Size(100, 20);
             this.txbStreamW.TabIndex = 13;
             // 
             // btnStreamW
             // 
-            this.btnStreamW.Location = new System.Drawing.Point(687, 332);
+            this.btnStreamW.Location = new System.Drawing.Point(630, 333);
             this.btnStreamW.Name = "btnStreamW";
             this.btnStreamW.Size = new System.Drawing.Size(111, 23);
             this.btnStreamW.TabIndex = 14;
@@ -223,7 +230,7 @@ namespace IntroductionFiles
             // 
             // btnStreamR
             // 
-            this.btnStreamR.Location = new System.Drawing.Point(687, 361);
+            this.btnStreamR.Location = new System.Drawing.Point(630, 362);
             this.btnStreamR.Name = "btnStreamR";
             this.btnStreamR.Size = new System.Drawing.Size(111, 23);
             this.btnStreamR.TabIndex = 15;
@@ -233,20 +240,78 @@ namespace IntroductionFiles
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(853, 332);
+            this.btnEditar.Location = new System.Drawing.Point(757, 362);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 16;
-            this.btnEditar.Text = "Editar";
+            this.btnEditar.Text = "Abrir";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txbDirArchivo
             // 
-            this.txbDirArchivo.Location = new System.Drawing.Point(839, 304);
+            this.txbDirArchivo.Location = new System.Drawing.Point(747, 333);
             this.txbDirArchivo.Name = "txbDirArchivo";
-            this.txbDirArchivo.Size = new System.Drawing.Size(100, 20);
+            this.txbDirArchivo.Size = new System.Drawing.Size(85, 20);
             this.txbDirArchivo.TabIndex = 17;
+            // 
+            // txbNombre
+            // 
+            this.txbNombre.Location = new System.Drawing.Point(898, 307);
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(100, 20);
+            this.txbNombre.TabIndex = 18;
+            // 
+            // txbNumero
+            // 
+            this.txbNumero.Location = new System.Drawing.Point(898, 333);
+            this.txbNumero.Name = "txbNumero";
+            this.txbNumero.Size = new System.Drawing.Size(100, 20);
+            this.txbNumero.TabIndex = 19;
+            // 
+            // txbAnios
+            // 
+            this.txbAnios.Location = new System.Drawing.Point(898, 365);
+            this.txbAnios.Name = "txbAnios";
+            this.txbAnios.Size = new System.Drawing.Size(100, 20);
+            this.txbAnios.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(845, 310);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(845, 340);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Numero";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(845, 368);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Años:";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(898, 401);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 24;
+            this.btnAdd.Text = "Agregar";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // MainForm
             // 
@@ -254,6 +319,13 @@ namespace IntroductionFiles
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1010, 451);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbAnios);
+            this.Controls.Add(this.txbNumero);
+            this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.txbDirArchivo);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnStreamR);
@@ -284,6 +356,13 @@ namespace IntroductionFiles
 
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TextBox txbDirArchivo;
+        private System.Windows.Forms.TextBox txbNombre;
+        private System.Windows.Forms.TextBox txbNumero;
+        private System.Windows.Forms.TextBox txbAnios;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAdd;
     }
 	}
 

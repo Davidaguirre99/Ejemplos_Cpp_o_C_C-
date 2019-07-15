@@ -323,11 +323,40 @@ namespace IntroductionFiles
         private void btnEditar_Click(object sender, EventArgs e)
         {
             string archivodir = txbDirArchivo.Text;
-            bool validacion = File.Exists(archivodir);
+            bool validacion = File.Exists(@archivodir);
             if(validacion==true)
             {
-                
+
+                StreamReader reading = File.OpenText(@archivodir);
+                string texto = reading.ReadToEnd();
+                reading.Close();
+                EscribirLog("Info", texto , dgvLogs);
             }
+            else
+            {
+                EscribirLog("Error", "No existe el directorio", dgvLogs);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string citas = "  Nombre:"+txbNombre.Text+"  Campeonatos:" +txbNumero.Text + "  Años:" +txbAnios.Text;
+            //string cita2 = txbNumero.Text;
+            //string cita3 = txbAnios.Text;
+            string[] textoarray = File.ReadAllLines(@txbDirArchivo.Text);
+            String Resultado = File.ReadAllText(@txbDirArchivo.Text);
+            StreamWriter esribir = File.CreateText(@txbDirArchivo.Text);
+            //foreach (string palabras in textoarray)
+            
+                esribir.WriteLine(Resultado+citas);
+            
+                
+           
+            esribir.Close();
+            //string resultado = File.ReadAllText(@txbDirArchivo.Text);
+            //EscribirLog("Info", resultado, dgvLogs);
+            /**/
+
         }
     }
 	}
