@@ -340,23 +340,148 @@ namespace IntroductionFiles
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string citas = "  Nombre:"+txbNombre.Text+"  Campeonatos:" +txbNumero.Text + "  Años:" +txbAnios.Text;
-            //string cita2 = txbNumero.Text;
-            //string cita3 = txbAnios.Text;
+            string libreria = txbType.Text;
+            
             string[] textoarray = File.ReadAllLines(@txbDirArchivo.Text);
             String Resultado = File.ReadAllText(@txbDirArchivo.Text);
             StreamWriter esribir = File.CreateText(@txbDirArchivo.Text);
+
+            switch (libreria)
+            {
+                case "Musica":
+                case "MUSICA":
+                    string citas1 = "  Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas1);
+                    esribir.Close();
+                    break;
+                case "Videojuegos":
+                case "VIDEOJUEGOS":
+                    string citas2 = "  Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas2);
+                    esribir.Close();
+                    break;
+                case "Libros":
+                case "LIBROS":
+                    string citas3 = "  Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas3);
+                    esribir.Close();
+                    break;
+                case "Peliculas":
+                case "PELICULAS":
+                    string citas4 = "  Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas4);
+                    esribir.Close();
+                    break;
+                case "Celulares":
+                case "CELULARES":
+                    string citas5 = "  Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas5);
+                    esribir.Close();
+                    break;
+                case "Equipos Futbol":
+                case "EQUIPOS FUTBOL":
+                    string citas6 = "  Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas6);
+                    esribir.Close();
+                    break;
+                case "Cuentas Bancarias":
+                case "CUENTAS BANCARIAS":
+                    string citas7 = "  Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas7);
+                    esribir.Close();
+                    break;
+                case "Automoviles":
+                case "AUTOMOVILES":
+                    string citas8 = "  Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas8);
+                    esribir.Close();
+                    break;
+                case "Personajes Historicos":
+                case "PERSONAJES HISTORICOS":
+                    string citas9 = "  Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas9);
+                    esribir.Close();
+                    break;
+                case "Atrasados":
+                case "ATRASADOS":
+                    string citas10 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas10);
+                    esribir.Close();
+                    break;
+                case "Ausentes":
+                case "AUSENTES":
+                    string citas11 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas11);
+                    esribir.Close();
+                    break;
+                case "Fugas":
+                case "FUGAS":
+                    string citas12 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas12);
+                    esribir.Close();
+                    break;
+                case "Asistencias":
+                case "ASISTENCIAS":
+                    string citas13 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    esribir.WriteLine(Resultado + citas13);
+                    esribir.Close();
+                    break;
+                default:
+                    string TipoError = "Solamente tiene los tipos Musica,Libros, Atrasados,Equipos Futbol,Ausentes,Asistencias,Fugas, Personajes Historicos,Automoviles,Cuentas Bancarias,Celulares,Peliculas y Videojuegos";
+                    MessageBoxButtons Icon = MessageBoxButtons.OK; 
+                    MessageBox.Show(TipoError,"",Icon);
+                    esribir.Close();
+                    break;
+            }
+
+            //string cita2 = txbNumero.Text;
+            //string cita3 = txbAnios.Text;
             //foreach (string palabras in textoarray)
-            
-                esribir.WriteLine(Resultado+citas);
-            
-                
-           
-            esribir.Close();
+
             //string resultado = File.ReadAllText(@txbDirArchivo.Text);
             //EscribirLog("Info", resultado, dgvLogs);
             /**/
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] resultado = File.ReadAllLines(@txbDirArchivo.Text);
+            string citas1 = "  Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
+            string citas2 = "  Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
+            string citas3 = "  Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas4 = "  Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
+            string citas5 = "  Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas6 = "  Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas7 = "  Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
+            string citas8 = "  Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
+            string citas9 = "  Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas10 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas11 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas12 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas13 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+
+            //String Resultado = File.ReadAllText(@txbDirArchivo.Text);
+            StreamWriter esribir = File.CreateText(@txbDirArchivo.Text);
+            foreach (string cadena in resultado)
+            {
+                if(cadena==citas1||cadena == citas2|| cadena == citas3||
+                   cadena == citas4|| cadena == citas5|| cadena == citas6||
+                   cadena == citas8|| cadena == citas9|| cadena == citas10||
+                   cadena == citas11|| cadena == citas12|| cadena == citas13||
+                   cadena==citas7)
+                    
+                {
+                    esribir.WriteLine("");
+                    continue;
+                }
+
+                esribir.WriteLine(cadena);
+            }
+            esribir.Close();
+            String Resultado = File.ReadAllText(@txbDirArchivo.Text);
+            EscribirLog("Info", Resultado, dgvLogs);
+           
         }
     }
 	}

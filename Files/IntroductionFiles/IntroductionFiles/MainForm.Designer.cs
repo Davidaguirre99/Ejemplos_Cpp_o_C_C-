@@ -81,6 +81,10 @@ namespace IntroductionFiles
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbType = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,7 +176,7 @@ namespace IntroductionFiles
             // 
             // btnCrearDirectorio
             // 
-            this.btnCrearDirectorio.Location = new System.Drawing.Point(440, 333);
+            this.btnCrearDirectorio.Location = new System.Drawing.Point(321, 391);
             this.btnCrearDirectorio.Name = "btnCrearDirectorio";
             this.btnCrearDirectorio.Size = new System.Drawing.Size(164, 23);
             this.btnCrearDirectorio.TabIndex = 8;
@@ -182,7 +186,7 @@ namespace IntroductionFiles
             // 
             // txbCrearDirectorio
             // 
-            this.txbCrearDirectorio.Location = new System.Drawing.Point(440, 307);
+            this.txbCrearDirectorio.Location = new System.Drawing.Point(325, 365);
             this.txbCrearDirectorio.Name = "txbCrearDirectorio";
             this.txbCrearDirectorio.Size = new System.Drawing.Size(160, 20);
             this.txbCrearDirectorio.TabIndex = 9;
@@ -213,14 +217,14 @@ namespace IntroductionFiles
             // 
             // txbStreamW
             // 
-            this.txbStreamW.Location = new System.Drawing.Point(630, 307);
+            this.txbStreamW.Location = new System.Drawing.Point(475, 305);
             this.txbStreamW.Name = "txbStreamW";
             this.txbStreamW.Size = new System.Drawing.Size(100, 20);
             this.txbStreamW.TabIndex = 13;
             // 
             // btnStreamW
             // 
-            this.btnStreamW.Location = new System.Drawing.Point(630, 333);
+            this.btnStreamW.Location = new System.Drawing.Point(593, 303);
             this.btnStreamW.Name = "btnStreamW";
             this.btnStreamW.Size = new System.Drawing.Size(111, 23);
             this.btnStreamW.TabIndex = 14;
@@ -230,7 +234,7 @@ namespace IntroductionFiles
             // 
             // btnStreamR
             // 
-            this.btnStreamR.Location = new System.Drawing.Point(630, 362);
+            this.btnStreamR.Location = new System.Drawing.Point(593, 331);
             this.btnStreamR.Name = "btnStreamR";
             this.btnStreamR.Size = new System.Drawing.Size(111, 23);
             this.btnStreamR.TabIndex = 15;
@@ -240,7 +244,7 @@ namespace IntroductionFiles
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(757, 362);
+            this.btnEditar.Location = new System.Drawing.Point(727, 333);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 16;
@@ -250,28 +254,28 @@ namespace IntroductionFiles
             // 
             // txbDirArchivo
             // 
-            this.txbDirArchivo.Location = new System.Drawing.Point(747, 333);
+            this.txbDirArchivo.Location = new System.Drawing.Point(727, 304);
             this.txbDirArchivo.Name = "txbDirArchivo";
             this.txbDirArchivo.Size = new System.Drawing.Size(85, 20);
             this.txbDirArchivo.TabIndex = 17;
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(898, 307);
+            this.txbNombre.Location = new System.Drawing.Point(882, 315);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(100, 20);
             this.txbNombre.TabIndex = 18;
             // 
             // txbNumero
             // 
-            this.txbNumero.Location = new System.Drawing.Point(898, 333);
+            this.txbNumero.Location = new System.Drawing.Point(882, 339);
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(100, 20);
             this.txbNumero.TabIndex = 19;
             // 
             // txbAnios
             // 
-            this.txbAnios.Location = new System.Drawing.Point(898, 365);
+            this.txbAnios.Location = new System.Drawing.Point(882, 365);
             this.txbAnios.Name = "txbAnios";
             this.txbAnios.Size = new System.Drawing.Size(100, 20);
             this.txbAnios.TabIndex = 20;
@@ -279,7 +283,7 @@ namespace IntroductionFiles
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(845, 310);
+            this.label1.Location = new System.Drawing.Point(833, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 21;
@@ -288,7 +292,7 @@ namespace IntroductionFiles
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(845, 340);
+            this.label2.Location = new System.Drawing.Point(836, 342);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 22;
@@ -297,7 +301,7 @@ namespace IntroductionFiles
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(845, 368);
+            this.label3.Location = new System.Drawing.Point(842, 368);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 23;
@@ -305,7 +309,7 @@ namespace IntroductionFiles
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(898, 401);
+            this.btnAdd.Location = new System.Drawing.Point(770, 391);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 24;
@@ -313,12 +317,51 @@ namespace IntroductionFiles
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(848, 391);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 25;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(929, 391);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 26;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(836, 292);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Libreria";
+            // 
+            // txbType
+            // 
+            this.txbType.Location = new System.Drawing.Point(883, 289);
+            this.txbType.Name = "txbType";
+            this.txbType.Size = new System.Drawing.Size(100, 20);
+            this.txbType.TabIndex = 28;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1010, 451);
+            this.Controls.Add(this.txbType);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -363,6 +406,10 @@ namespace IntroductionFiles
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txbType;
     }
 	}
 
