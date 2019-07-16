@@ -88,6 +88,7 @@ namespace IntroductionFiles
             this.txbType = new System.Windows.Forms.TextBox();
             this.btnOrdenarArregloBS = new System.Windows.Forms.Button();
             this.txbarrreglo = new System.Windows.Forms.TextBox();
+            this.btnOdenarArregloSs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -302,22 +303,21 @@ namespace IntroductionFiles
             this.label1.Text = "Cita1:";
             // 
             // label2
-    
-
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Cita 2:";
-
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(842, 368);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 23;
-
             this.label3.Text = "Cita3:";
-
             // 
             // btnAdd
             // 
@@ -366,7 +366,7 @@ namespace IntroductionFiles
             // 
             // btnOrdenarArregloBS
             // 
-            this.btnOrdenarArregloBS.Location = new System.Drawing.Point(700, 38);
+            this.btnOrdenarArregloBS.Location = new System.Drawing.Point(691, 38);
             this.btnOrdenarArregloBS.Name = "btnOrdenarArregloBS";
             this.btnOrdenarArregloBS.Size = new System.Drawing.Size(75, 23);
             this.btnOrdenarArregloBS.TabIndex = 29;
@@ -376,10 +376,19 @@ namespace IntroductionFiles
             // 
             // txbarrreglo
             // 
-            this.txbarrreglo.Location = new System.Drawing.Point(700, 12);
+            this.txbarrreglo.Location = new System.Drawing.Point(691, 12);
             this.txbarrreglo.Name = "txbarrreglo";
-            this.txbarrreglo.Size = new System.Drawing.Size(126, 20);
+            this.txbarrreglo.Size = new System.Drawing.Size(154, 20);
             this.txbarrreglo.TabIndex = 30;
+            // 
+            // btnOdenarArregloSs
+            // 
+            this.btnOdenarArregloSs.Location = new System.Drawing.Point(772, 38);
+            this.btnOdenarArregloSs.Name = "btnOdenarArregloSs";
+            this.btnOdenarArregloSs.Size = new System.Drawing.Size(75, 23);
+            this.btnOdenarArregloSs.TabIndex = 31;
+            this.btnOdenarArregloSs.Text = "Select Sort";
+            this.btnOdenarArregloSs.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -387,6 +396,7 @@ namespace IntroductionFiles
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1010, 451);
+            this.Controls.Add(this.btnOdenarArregloSs);
             this.Controls.Add(this.txbarrreglo);
             this.Controls.Add(this.btnOrdenarArregloBS);
             this.Controls.Add(this.txbType);
@@ -443,6 +453,7 @@ namespace IntroductionFiles
         private System.Windows.Forms.TextBox txbType;
         private System.Windows.Forms.Button btnOrdenarArregloBS;
         private System.Windows.Forms.TextBox txbarrreglo;
+        private System.Windows.Forms.Button btnOdenarArregloSs;
     }
 	}
 

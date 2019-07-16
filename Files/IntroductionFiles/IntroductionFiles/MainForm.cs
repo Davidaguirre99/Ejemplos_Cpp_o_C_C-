@@ -495,8 +495,8 @@ namespace IntroductionFiles
         {
             string Numeros = txbarrreglo.Text;
             string[] numerosseparacion = Numeros.Split(',');
-            int[] cantidades= new int[numerosseparacion.Length];
-
+            int[] cantidades= new int[numerosseparacion.Length + 1];
+            int longitudArreglo = numerosseparacion.Length-1;
             int contador = 0;
             foreach (string numero in numerosseparacion)
             {
@@ -505,27 +505,47 @@ namespace IntroductionFiles
                 EscribirLog("Info",cantidades[contador].ToString(),dgvLogs);
                 contador++;
             }
-            for(int iPrimerElemento=0;iPrimerElemento<cantidades.Length;iPrimerElemento++)
+            for (int iPrimerelemento = 0;
+                iPrimerelemento < longitudArreglo;
+                iPrimerelemento++)
+            { // PRIMER FOR
+
+                for (int iSegundolemento = 0;
+                    iSegundolemento < (longitudArreglo - iPrimerelemento);
+                iSegundolemento++)
+                {  // SEGUNDO FOR
+
+                    int primerNumero = cantidades[iSegundolemento];
+                    int segundoNumero = cantidades[iSegundolemento + 1];
+
+                    if (primerNumero > segundoNumero)
+                    {  // COMPARACION
+                        int valorTemporal = primerNumero;
+                        cantidades[iSegundolemento] = cantidades[iSegundolemento + 1];
+                        cantidades[iSegundolemento + 1] = valorTemporal;
+
+                    } //  TERMINA COMPARACION
+
+                }  // TERMINA SEGUNDO FOR
+
+
+            }// TERMINA PRIMER FOR
+
+            foreach (int elemento in cantidades)
             {
-                for (int iSegundoElemento=0;iSegundoElemento<cantidades.Length;iSegundoElemento++)
-                {
-                    int primerNumero = cantidades[iPrimerElemento];
-                    int segundoNumero = cantidades[iSegundoElemento];
-                    if (segundoNumero<primerNumero)
-                    {
-                        int valorTemporal = segundoNumero;
-                        cantidades[iPrimerElemento] = cantidades[iSegundoElemento];
-                        cantidades[iSegundoElemento] = primerNumero;
-                    }
-                }
+
+                EscribirLog("info", elemento.ToString(), dgvLogs);
 
             }
+
         }
     }
 	}
-
-
-
+  
+   //[1,2,3]
+//[0]=1
+//[1]=2
+// temporal=[0]=1
 	
 	
 		
