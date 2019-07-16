@@ -334,7 +334,9 @@ namespace IntroductionFiles
             }
             else
             {
-                EscribirLog("Error", "No existe el directorio", dgvLogs);
+                EscribirLog("Error", "No existe el archivo, pero no se preocupe ya se creo su entrada", dgvLogs);
+                StreamWriter nuevo = File.CreateText(@archivodir);
+                nuevo.Close();
             }
         }
 
@@ -482,6 +484,42 @@ namespace IntroductionFiles
             String Resultado = File.ReadAllText(@txbDirArchivo.Text);
             EscribirLog("Info", Resultado, dgvLogs);
            
+        }
+
+        private void txbDirArchivo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrdenarArregloBS_Click(object sender, EventArgs e)
+        {
+            string Numeros = txbarrreglo.Text;
+            string[] numerosseparacion = Numeros.Split(',');
+            int[] cantidades= new int[numerosseparacion.Length];
+
+            int contador = 0;
+            foreach (string numero in numerosseparacion)
+            {
+
+                cantidades[contador]= Int32.Parse(numero); 
+                EscribirLog("Info",cantidades[contador].ToString(),dgvLogs);
+                contador++;
+            }
+            for(int iPrimerElemento=0;iPrimerElemento<cantidades.Length;iPrimerElemento++)
+            {
+                for (int iSegundoElemento=0;iSegundoElemento<cantidades.Length;iSegundoElemento++)
+                {
+                    int primerNumero = cantidades[iPrimerElemento];
+                    int segundoNumero = cantidades[iSegundoElemento];
+                    if (segundoNumero<primerNumero)
+                    {
+                        int valorTemporal = segundoNumero;
+                        cantidades[iPrimerElemento] = cantidades[iSegundoElemento];
+                        cantidades[iSegundoElemento] = primerNumero;
+                    }
+                }
+
+            }
         }
     }
 	}
