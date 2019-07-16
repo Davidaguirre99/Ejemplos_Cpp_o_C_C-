@@ -285,27 +285,27 @@ namespace IntroductionFiles
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(833, 315);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Nombre:";
+            this.label1.Text = "Cita1:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(836, 342);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Numero";
+            this.label2.Text = "Cita 2:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(842, 368);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Años:";
+            this.label3.Text = "Cita 3 :";
             // 
             // btnAdd
             // 
