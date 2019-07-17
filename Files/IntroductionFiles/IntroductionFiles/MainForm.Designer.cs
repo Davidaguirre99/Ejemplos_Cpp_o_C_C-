@@ -302,22 +302,21 @@ namespace IntroductionFiles
             this.label1.Text = "Cita1:";
             // 
             // label2
-    
-
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Cita 2:";
-
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(842, 368);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 23;
-
             this.label3.Text = "Cita3:";
-
             // 
             // btnAdd
             // 
@@ -347,6 +346,7 @@ namespace IntroductionFiles
             this.btnActualizar.TabIndex = 26;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label4
             // 

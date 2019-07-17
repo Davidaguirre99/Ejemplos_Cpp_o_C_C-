@@ -521,6 +521,54 @@ namespace IntroductionFiles
 
             }
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            string[] resultado = File.ReadAllLines(@txbDirArchivo.Text);
+            string citas1 = "  Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
+            string citas2 = "  Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
+            string citas3 = "  Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas4 = "  Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
+            string citas5 = "  Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas6 = "  Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas7 = "  Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
+            string citas8 = "  Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
+            string citas9 = "  Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas10 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas11 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas12 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas13 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+
+            foreach (string linea in resultado)
+            {
+               /* while (linea != citas1 & linea != citas2 &
+                linea != citas3 & linea != citas4 &
+                linea != citas5 & linea != citas6 &
+                linea != citas7 & linea != citas8 &
+                linea != citas9 & linea != citas10 &
+                linea != citas11 & linea != citas12 &
+                linea != citas13)
+                {
+                    continue;
+                }*/
+                if (linea == citas1 || linea == citas2 ||
+                linea == citas3 || linea == citas4 ||
+                linea == citas5 || linea == citas6 ||
+                linea == citas7 || linea == citas8 ||
+                linea == citas9 || linea == citas10 ||
+                linea == citas11 || linea == citas12 ||
+                linea == citas13)
+                {
+                    continue;
+                }
+                string[] citaespecifica = linea.Split(' ');
+                string[] citaespecifica1 = citas1.Split(' ');
+                
+
+
+            }
+
+        }
     }
 	}
 
