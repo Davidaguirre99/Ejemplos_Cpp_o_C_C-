@@ -557,6 +557,10 @@ namespace IntroductionFiles
             string citas12 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
             string citas13 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
 
+            StreamWriter archivo = File.CreateText(@txbDirArchivo.Text);
+            int numerodeLinea=1;
+           
+            int z = 0;
             foreach (string linea in resultado)
             {
                /* while (linea != citas1 & linea != citas2 &
@@ -567,9 +571,13 @@ namespace IntroductionFiles
                 linea != citas11 & linea != citas12 &
                 linea != citas13)
                 {
+                    numerodeLinea++;
+                    string informacion = "Los Datos escritos no existe; verifique que escribio correctamente";
+                    MessageBoxButtons icono = MessageBoxButtons.OK;
+                    MessageBox.Show(informacion,"Adevertencia",icono);
                     continue;
                 }*/
-                if (linea == citas1 || linea == citas2 ||
+                /*if (linea == citas1 || linea == citas2 ||
                 linea == citas3 || linea == citas4 ||
                 linea == citas5 || linea == citas6 ||
                 linea == citas7 || linea == citas8 ||
@@ -577,15 +585,72 @@ namespace IntroductionFiles
                 linea == citas11 || linea == citas12 ||
                 linea == citas13)
                 {
+                    numerodeLinea++;
+                    string informacion = "Los Datos escritos no existe; verifique que escribio correctamente";
+                    MessageBoxButtons icono = MessageBoxButtons.OK;
+                    MessageBox.Show(informacion, "Adevertencia", icono);
                     continue;
-                }
+                }*/
                 string[] citaespecifica = linea.Split(' ');
                 string[] citaespecifica1 = citas1.Split(' ');
+
+                int i = 0;
+
+                foreach (string citasguardadas in citaespecifica)
+                    {
+                        if(citasguardadas == citaespecifica1[i])
+                        {
+                        if(i==2)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            i++;
+                        continue;
+                        }
+                    }
+                    else
+                    {
+                        i++;
+                        z++;
+                        if (z<=2)
+                        {
+                            continue;
+
+                        }
+                        else
+                        {
+                            //resultado[numerodeLinea] = citas1;
+                            EscribirLog("Info", citas1, dgvLogs);
+                            for (int k = 0; k < resultado.Length; k++)
+                            {
+                                archivo.WriteLine(resultado[k]);
+
+                            }
+                            break;
+                        }
+
+                    }
+                     
+                    }
+                numerodeLinea++;                                                
+                //archivo.WriteLine(nuevaLinea);
                 
-
-
             }
+  
+           if(z<3)
+            {
+                resultado[numerodeLinea] = citas1;
+                EscribirLog("Info", citas1, dgvLogs);
+                for (int k = 0; k < resultado.Length; k++)
+                {
+                    archivo.WriteLine(resultado[k]);
 
+                }
+            }
+             
+            archivo.Close();
         }
     }
 	}
