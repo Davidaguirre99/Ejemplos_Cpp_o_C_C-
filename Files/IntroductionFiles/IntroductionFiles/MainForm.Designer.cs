@@ -89,6 +89,8 @@ namespace IntroductionFiles
             this.btnOrdenarArregloBS = new System.Windows.Forms.Button();
             this.txbarrreglo = new System.Windows.Forms.TextBox();
             this.btnOdenarArregloSs = new System.Windows.Forms.Button();
+            this.txbBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -391,12 +393,31 @@ namespace IntroductionFiles
             this.btnOdenarArregloSs.Text = "Select Sort";
             this.btnOdenarArregloSs.UseVisualStyleBackColor = true;
             // 
+            // txbBuscar
+            // 
+            this.txbBuscar.Location = new System.Drawing.Point(882, 11);
+            this.txbBuscar.Name = "txbBuscar";
+            this.txbBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txbBuscar.TabIndex = 32;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(883, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 33;
+            this.btnBuscar.Text = "Ordenar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1010, 451);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txbBuscar);
             this.Controls.Add(this.btnOdenarArregloSs);
             this.Controls.Add(this.txbarrreglo);
             this.Controls.Add(this.btnOrdenarArregloBS);
@@ -455,6 +476,8 @@ namespace IntroductionFiles
         private System.Windows.Forms.Button btnOrdenarArregloBS;
         private System.Windows.Forms.TextBox txbarrreglo;
         private System.Windows.Forms.Button btnOdenarArregloSs;
+        private System.Windows.Forms.TextBox txbBuscar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 	}
 
