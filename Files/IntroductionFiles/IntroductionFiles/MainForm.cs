@@ -357,79 +357,79 @@ namespace IntroductionFiles
             {
                 case "Musica":
                 case "MUSICA":
-                    string citas1 = "  Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
+                    string citas1 = "Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas1);
                     esribir.Close();
                     break;
                 case "Videojuegos":
                 case "VIDEOJUEGOS":
-                    string citas2 = "  Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
+                    string citas2 = "Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas2);
                     esribir.Close();
                     break;
                 case "Libros":
                 case "LIBROS":
-                    string citas3 = "  Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+                    string citas3 = "Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas3);
                     esribir.Close();
                     break;
                 case "Peliculas":
                 case "PELICULAS":
-                    string citas4 = "  Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
+                    string citas4 = "Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas4);
                     esribir.Close();
                     break;
                 case "Celulares":
                 case "CELULARES":
-                    string citas5 = "  Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+                    string citas5 = "Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas5);
                     esribir.Close();
                     break;
                 case "Equipos Futbol":
                 case "EQUIPOS FUTBOL":
-                    string citas6 = "  Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+                    string citas6 = "Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas6);
                     esribir.Close();
                     break;
                 case "Cuentas Bancarias":
                 case "CUENTAS BANCARIAS":
-                    string citas7 = "  Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
+                    string citas7 = "Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas7);
                     esribir.Close();
                     break;
                 case "Automoviles":
                 case "AUTOMOVILES":
-                    string citas8 = "  Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
+                    string citas8 = "Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas8);
                     esribir.Close();
                     break;
                 case "Personajes Historicos":
                 case "PERSONAJES HISTORICOS":
-                    string citas9 = "  Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+                    string citas9 = "Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas9);
                     esribir.Close();
                     break;
                 case "Atrasados":
                 case "ATRASADOS":
-                    string citas10 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    string citas10 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas10);
                     esribir.Close();
                     break;
                 case "Ausentes":
                 case "AUSENTES":
-                    string citas11 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    string citas11 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas11);
                     esribir.Close();
                     break;
                 case "Fugas":
                 case "FUGAS":
-                    string citas12 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    string citas12 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas12);
                     esribir.Close();
                     break;
                 case "Asistencias":
                 case "ASISTENCIAS":
-                    string citas13 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+                    string citas13 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
                     esribir.WriteLine(Resultado + citas13);
                     esribir.Close();
                     break;
@@ -454,19 +454,20 @@ namespace IntroductionFiles
         private void button1_Click(object sender, EventArgs e)
         {
             string[] resultado = File.ReadAllLines(@txbDirArchivo.Text);
-            string citas1 = "  Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
-            string citas2 = "  Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
-            string citas3 = "  Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
-            string citas4 = "  Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
-            string citas5 = "  Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
-            string citas6 = "  Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
-            string citas7 = "  Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
-            string citas8 = "  Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
-            string citas9 = "  Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
-            string citas10 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
-            string citas11 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
-            string citas12 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
-            string citas13 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string textoantiguo = File.ReadAllText(@txbDirArchivo.Text);
+            string citas1 = "Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
+            string citas2 = "Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
+            string citas3 = "Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas4 = "Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
+            string citas5 = "Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas6 = "Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas7 = "Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
+            string citas8 = "Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
+            string citas9 = "Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas10 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas11 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas12 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas13 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
 
             //String Resultado = File.ReadAllText(@txbDirArchivo.Text);
             StreamWriter esribir = File.CreateText(@txbDirArchivo.Text);
@@ -548,124 +549,101 @@ namespace IntroductionFiles
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             string[] resultado = File.ReadAllLines(@txbDirArchivo.Text);
-            string citas1 = "  Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
-            string citas2 = "  Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
-            string citas3 = "  Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
-            string citas4 = "  Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
-            string citas5 = "  Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
-            string citas6 = "  Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
-            string citas7 = "  Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
-            string citas8 = "  Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
-            string citas9 = "  Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
-            string citas10 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
-            string citas11 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
-            string citas12 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
-            string citas13 = "  Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string textoantiguo = File.ReadAllText(@txbDirArchivo.Text);
+            string citas1 = "Autor:" + txbNombre.Text + "  Duracion:" + txbNumero.Text + "  Instrumentos:" + txbAnios.Text;
+            string citas2 = "Juego:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Tamaño(MB)" + txbAnios.Text;
+            string citas3 = "Autor:" + txbNombre.Text + "  Edicion:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas4 = "Titulo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Duracion(Hrs):" + txbAnios.Text;
+            string citas5 = "Marca:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Año:" + txbAnios.Text;
+            string citas6 = "Equipo:" + txbNombre.Text + "  Campeonatos:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas7 = "Nombre:" + txbNombre.Text + "  Numero de Cuenta" + txbNumero.Text + "  Money:" + txbAnios.Text;
+            string citas8 = "Modelo:" + txbNombre.Text + "  Año:" + txbNumero.Text + "  Recorrido(Km):" + txbAnios.Text;
+            string citas9 = "Nombre:" + txbNombre.Text + "  Año Nacimiento:" + txbNumero.Text + "  Años:" + txbAnios.Text;
+            string citas10 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas11 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas12 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
+            string citas13 = "Nombre:" + txbNombre.Text + "  Numero:" + txbNumero.Text + "  Edad:" + txbAnios.Text;
 
             StreamWriter archivo = File.CreateText(@txbDirArchivo.Text);
             int numerodeLinea = 1;
 
-            int z = 0;
+            int cuentaPalabrasIguales = 0;
             foreach (string linea in resultado)
             {
-                /* while (linea != citas1 & linea != citas2 &
-                 linea != citas3 & linea != citas4 &
-                 linea != citas5 & linea != citas6 &
-                 linea != citas7 & linea != citas8 &
-                 linea != citas9 & linea != citas10 &
-                 linea != citas11 & linea != citas12 &
-                 linea != citas13)
-                 {
-                     numerodeLinea++;
-                     string informacion = "Los Datos escritos no existe; verifique que escribio correctamente";
-                     MessageBoxButtons icono = MessageBoxButtons.OK;
-                     MessageBox.Show(informacion,"Adevertencia",icono);
-                     continue;
-                 }*/
-                /*if (linea == citas1 || linea == citas2 ||
-                linea == citas3 || linea == citas4 ||
-                linea == citas5 || linea == citas6 ||
-                linea == citas7 || linea == citas8 ||
-                linea == citas9 || linea == citas10 ||
-                linea == citas11 || linea == citas12 ||
-                linea == citas13)
+                         
+                if(linea=="")
                 {
                     numerodeLinea++;
-                    string informacion = "Los Datos escritos no existe; verifique que escribio correctamente";
-                    MessageBoxButtons icono = MessageBoxButtons.OK;
-                    MessageBox.Show(informacion, "Adevertencia", icono);
                     continue;
-                }*/
+                }
                 string[] citaespecifica = linea.Split(' ');
                 string[] citaespecifica1 = citas1.Split(' ');
 
-                int i = 0;
-
-                foreach (string citasguardadas in citaespecifica)
+                for (int i = 0; i < resultado.Length; i++)
                 {
-                    if (citasguardadas == citaespecifica1[i])
+                    if (cuentaPalabrasIguales < 2)
                     {
-                        if (i == 2)
+                        if (citaespecifica[i] == citaespecifica1[i] & citaespecifica[i] != "")
                         {
-                            break;
+                            cuentaPalabrasIguales++;
+                            continue;
                         }
                         else
                         {
-                            i++;
-                            continue;
+                            if (i == 2)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+
                         }
                     }
                     else
                     {
-                        i++;
-                        z++;
-                        if (z <= 2)
-                        {
-                            continue;
-
-                        }
-                        else
-                        {
-                            //resultado[numerodeLinea] = citas1;
-                            EscribirLog("Info", citas1, dgvLogs);
-                            for (int k = 0; k < resultado.Length; k++)
-                            {
-                                archivo.WriteLine(resultado[0] + resultado[k]);
-
-                            }
-                            break;
-                        }
-
+                        break;
                     }
 
                 }
-                numerodeLinea++;
-                //archivo.WriteLine(nuevaLinea);
-
-            }
-
-            if (z < 3)
-            {
-                resultado[numerodeLinea] = citas1;
-                EscribirLog("Info", citas1, dgvLogs);
-                for (int k = 0; k < resultado.Length; k++)
+                if(cuentaPalabrasIguales==0)
                 {
-                    archivo.WriteLine(resultado[k]);
-
+                    numerodeLinea++;
+                    continue;
                 }
+                 
             }
+            
+            if (cuentaPalabrasIguales >= 0 & cuentaPalabrasIguales <= 2)
+            {
+                resultado[numerodeLinea-1] = citas1;
+                
+                
+                    string resultadonuevo = string.Join("\n",resultado);
+                    archivo.WriteLine(resultadonuevo);
+                
 
-            archivo.Close();
+                archivo.Close();
+            }
+            else
+            {
+                EscribirLog("info","No se encontraron resgistros para actualizar",dgvLogs);
+                
+                archivo.WriteLine(textoantiguo);
+                archivo.Close();
+            }
+           
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string Numeros = txbarrreglo.Text;
-            string[] numerosseparacion = Numeros.Split(',');
-            int[] cantidades = new int[numerosseparacion.Length + 1];
-            int longitudArreglo = numerosseparacion.Length - 1;
+            string[] numerosseparados = Numeros.Split(',');
+            int[] cantidades = new int[numerosseparados.Length + 1];
+            int longitudArreglo = numerosseparados.Length - 1;
             int contador = 0;
-            foreach (string numero in numerosseparacion)
+            foreach (string numero in numerosseparados)
             {
 
                 cantidades[contador] = Int32.Parse(numero);
@@ -697,35 +675,43 @@ namespace IntroductionFiles
 
 
             }// TERMINA PRIMER FOR
-            int mitad = cantidades.Length ;
-            int j = 1;
-
-            int numerodeseado = Int32.Parse(txbBuscar.Text);
-            for (int i = 2; i <mitad/2 ; i =i+2 )
+            int numerodeseado = Int32.Parse(@txbBuscar.Text);
+            int divisionMitad = 2;
+            int elementosComparar = cantidades.Length/divisionMitad;
+            for (int posiciones=0;posiciones<cantidades.Length;posiciones++)
             {
-                mitad = mitad / i;
-                if (cantidades[mitad] > numerodeseado)
+                
+                while (cantidades[elementosComparar]>numerodeseado)
                 {
-                    if(numerodeseado==cantidades[mitad])
-                    {
-                       
-                        i =i-j;
-                        EscribirLog("info","EL numero deseado es:"+numerodeseado.ToString(),dgvLogs);
-                        EscribirLog("info", "El numero de comparaciones fueron:" + i.ToString(), dgvLogs);
-                        break;
-                    }
-                    else
-                    {
-                        j++;
-                        
-                    }
+                    divisionMitad = divisionMitad + 2;
+                    elementosComparar = elementosComparar / divisionMitad;
+                    break;
                 }
+                while(cantidades[elementosComparar] < numerodeseado)
+                {
+
+                    posiciones = cantidades.Length/2;
+                    divisionMitad = divisionMitad + 2;
+                    elementosComparar = elementosComparar / divisionMitad;
+                    elementosComparar = posiciones + elementosComparar;
+                    
+                    break;
+                }
+                if (numerodeseado == cantidades[posiciones]) 
+                {
+                    int iteraciones = posiciones + 1;
+                    EscribirLog("info","Iteraciones="+iteraciones.ToString() ,dgvLogs);
+                    break;
+                }
+                
+            }
+
             }
             
 
         }
     }
-}
+
   
    //[1,2,3]
 //[0]=1
