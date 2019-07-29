@@ -639,15 +639,15 @@ namespace IntroductionFiles
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string Numeros = txbarrreglo.Text;
-            string[] numerosseparados = Numeros.Split(',');
-            int[] cantidades = new int[numerosseparados.Length + 1];
-            int longitudArreglo = numerosseparados.Length - 1;
+            string[] numerosseparacion = Numeros.Split(',');
+            int[] cantidades = new int[numerosseparacion.Length + 1];
+            int longitudArreglo = numerosseparacion.Length - 1;
             int contador = 0;
-            foreach (string numero in numerosseparados)
+            foreach (string numero in numerosseparacion)
             {
 
                 cantidades[contador] = Int32.Parse(numero);
-                //EscribirLog("Info", cantidades[contador].ToString(), dgvLogs);
+                EscribirLog("Info", cantidades[contador].ToString(), dgvLogs);
                 contador++;
             }
             for (int iPrimerelemento = 0;
@@ -675,32 +675,57 @@ namespace IntroductionFiles
 
 
             }// TERMINA PRIMER FOR
+
+            foreach (int elemento in cantidades)
+            {
+
+                EscribirLog("info", elemento.ToString(), dgvLogs);
+
+            }
             int numerodeseado = Int32.Parse(@txbBuscar.Text);
-            int divisionMitad = 2;
-            int elementosComparar = cantidades.Length/divisionMitad;
+            int divisionMitad = 0;
+            int elementosComparar = cantidades.Length;
             for (int posiciones=0;posiciones<cantidades.Length;posiciones++)
             {
+                divisionMitad = divisionMitad + 2;
+               if(elementosComparar>divisionMitad)
+                {
+                    elementosComparar = elementosComparar / divisionMitad;
+                }
+                else
+                {
+                    elementosComparar = elementosComparar / 2;
+                }
                 
+
                 while (cantidades[elementosComparar]>numerodeseado)
                 {
-                    divisionMitad = divisionMitad + 2;
-                    elementosComparar = elementosComparar / divisionMitad;
+
                     break;
                 }
                 while(cantidades[elementosComparar] < numerodeseado)
                 {
 
-                    posiciones = cantidades.Length/2;
-                    divisionMitad = divisionMitad + 2;
-                    elementosComparar = elementosComparar / divisionMitad;
-                    elementosComparar = posiciones + elementosComparar;
-                    
-                    break;
+                    if(elementosComparar==cantidades.Length/2)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        int mitad = cantidades.Length / 2;
+
+                        elementosComparar = mitad + elementosComparar;
+
+
+                        break;
+                    }
+
                 }
-                if (numerodeseado == cantidades[posiciones]) 
+                if (numerodeseado == cantidades[elementosComparar]) 
                 {
                     int iteraciones = posiciones + 1;
-                    EscribirLog("info","Iteraciones="+iteraciones.ToString() ,dgvLogs);
+                    int posiciondeseada = elementosComparar + 1;
+                    EscribirLog("info","Iteraciones="+iteraciones.ToString()+"Posicion en el arreglo ordenado: "+posiciondeseada.ToString() ,dgvLogs);
                     break;
                 }
                 
